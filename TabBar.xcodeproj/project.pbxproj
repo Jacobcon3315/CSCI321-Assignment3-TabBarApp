@@ -11,11 +11,6 @@
 		865C39C8290752FD0087DA79 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865C39C7290752FD0087DA79 /* ContentView.swift */; };
 		865C39CA290752FE0087DA79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 865C39C9290752FE0087DA79 /* Assets.xcassets */; };
 		865C39CD290752FE0087DA79 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 865C39CC290752FE0087DA79 /* Preview Assets.xcassets */; };
-		865C39CF290752FE0087DA79 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865C39CE290752FE0087DA79 /* Persistence.swift */; };
-		865C39D2290752FF0087DA79 /* TabBar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 865C39D0290752FE0087DA79 /* TabBar.xcdatamodeld */; };
-		865C39DC290752FF0087DA79 /* TabBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865C39DB290752FF0087DA79 /* TabBarTests.swift */; };
-		865C39E6290752FF0087DA79 /* TabBarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865C39E5290752FF0087DA79 /* TabBarUITests.swift */; };
-		865C39E8290752FF0087DA79 /* TabBarUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865C39E7290752FF0087DA79 /* TabBarUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,13 +36,8 @@
 		865C39C7290752FD0087DA79 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		865C39C9290752FE0087DA79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		865C39CC290752FE0087DA79 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		865C39CE290752FE0087DA79 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		865C39D1290752FE0087DA79 /* TabBar.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TabBar.xcdatamodel; sourceTree = "<group>"; };
 		865C39D7290752FF0087DA79 /* TabBarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TabBarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		865C39DB290752FF0087DA79 /* TabBarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarTests.swift; sourceTree = "<group>"; };
 		865C39E1290752FF0087DA79 /* TabBarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TabBarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		865C39E5290752FF0087DA79 /* TabBarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarUITests.swift; sourceTree = "<group>"; };
-		865C39E7290752FF0087DA79 /* TabBarUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +69,6 @@
 			isa = PBXGroup;
 			children = (
 				865C39C4290752FD0087DA79 /* TabBar */,
-				865C39DA290752FF0087DA79 /* TabBarTests */,
-				865C39E4290752FF0087DA79 /* TabBarUITests */,
 				865C39C3290752FD0087DA79 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -101,8 +89,6 @@
 				865C39C5290752FD0087DA79 /* TabBarApp.swift */,
 				865C39C7290752FD0087DA79 /* ContentView.swift */,
 				865C39C9290752FE0087DA79 /* Assets.xcassets */,
-				865C39CE290752FE0087DA79 /* Persistence.swift */,
-				865C39D0290752FE0087DA79 /* TabBar.xcdatamodeld */,
 				865C39CB290752FE0087DA79 /* Preview Content */,
 			);
 			path = TabBar;
@@ -114,23 +100,6 @@
 				865C39CC290752FE0087DA79 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		865C39DA290752FF0087DA79 /* TabBarTests */ = {
-			isa = PBXGroup;
-			children = (
-				865C39DB290752FF0087DA79 /* TabBarTests.swift */,
-			);
-			path = TabBarTests;
-			sourceTree = "<group>";
-		};
-		865C39E4290752FF0087DA79 /* TabBarUITests */ = {
-			isa = PBXGroup;
-			children = (
-				865C39E5290752FF0087DA79 /* TabBarUITests.swift */,
-				865C39E7290752FF0087DA79 /* TabBarUITestsLaunchTests.swift */,
-			);
-			path = TabBarUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,10 +232,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				865C39CF290752FE0087DA79 /* Persistence.swift in Sources */,
 				865C39C8290752FD0087DA79 /* ContentView.swift in Sources */,
 				865C39C6290752FD0087DA79 /* TabBarApp.swift in Sources */,
-				865C39D2290752FF0087DA79 /* TabBar.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,7 +241,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				865C39DC290752FF0087DA79 /* TabBarTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,8 +248,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				865C39E8290752FF0087DA79 /* TabBarUITestsLaunchTests.swift in Sources */,
-				865C39E6290752FF0087DA79 /* TabBarUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -585,19 +549,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		865C39D0290752FE0087DA79 /* TabBar.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				865C39D1290752FE0087DA79 /* TabBar.xcdatamodel */,
-			);
-			currentVersion = 865C39D1290752FE0087DA79 /* TabBar.xcdatamodel */;
-			path = TabBar.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 865C39BA290752FD0087DA79 /* Project object */;
 }
