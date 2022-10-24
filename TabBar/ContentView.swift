@@ -6,12 +6,18 @@
 //
 
 import SwiftUI
-import CoreData
 
 struct ContentView: View {
-    
     var body: some View {
-        ZStack {
+        TabView {
+            TempCalculatorView()
+                .tabItem {
+                    Label("Temperature", image: "Temperature")
+                }
+            LoanCalculatorView()
+                .tabItem {
+                    Label("Mortgage", image: "House")
+                }
         }
     }
     
