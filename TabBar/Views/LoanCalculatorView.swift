@@ -9,18 +9,23 @@ import SwiftUI
 
 struct LoanCalculatorView: View {
     
-    @State private var principal: String = "145000"
-    @State private var interest: Double = 4.65
-    @State private var years: Double = 25
+    @State private var principal: String = ""
+    @State private var interest: Double = 4.50
+    @State private var years: Double = 15
     @State private var payment: Double = 0.00
+    @State private var alertText: String = "Enter valid principal amount"
+    @State private var showAlert = false
     
     func compute() {
         
-        let principalD = Double(principal)
+        guard let principalD = Double(principal) else {
+            showAlert = true
+            return
+        }
         let intDivide = (interest / 100.0) / 12.0
         let pow1 = pow((1.0 + intDivide),(years * 12.0))
         
-        payment = (principalD! * intDivide * pow1) / (pow1 - 1.0)
+        payment = (principalD * intDivide * pow1) / (pow1 - 1.0)
         
     }
     
@@ -31,7 +36,7 @@ struct LoanCalculatorView: View {
                 .bold()
                 .padding()
             
-            TextField("Enter Principal", text: $principal)
+            TextField("Enter principal", text: $principal)
                 .keyboardType(.numbersAndPunctuation)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding(.horizontal)
@@ -103,6 +108,14 @@ struct LoanCalculatorView: View {
             }
             
             Spacer()
+            
+                .alert(isPresented: $showAlert) {
+                    Alert(
+                        title: Text("Error"),
+                        message: Text(alertText)
+                    )
+                }
+            
         }
     }
 }
