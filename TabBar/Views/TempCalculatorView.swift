@@ -23,6 +23,8 @@ struct TempCalculatorView: View {
     @State private var option = 0
     @State private var result = 0.00
     @State private var optionChar = "C"
+    @State private var oppositeChar = "F"
+    
     let pickerData = [Array(-129...134), Array(-90...57)]
     
     //This function changes certain variables depending on if the selection is c to f, or f to c
@@ -32,12 +34,14 @@ struct TempCalculatorView: View {
             selected = 32
             option = 0
             optionChar = "C"
+            oppositeChar = "F"
         }
         
         else {
             selected = 0
             option = 1
             optionChar = "F"
+            oppositeChar = "C"
         }
         
     }
@@ -79,7 +83,7 @@ struct TempCalculatorView: View {
             //Creates a picker that displays the entirety of the subarray of pickerData, dependign on which option is chosen, with an onChange to check when modified
             Picker("Temperature", selection: $selected) {
                 ForEach(pickerData[option], id: \.self) {
-                    Text("\($0)")
+                    Text("\($0)°\(oppositeChar)")
                 }
             }
             .pickerStyle(WheelPickerStyle())
