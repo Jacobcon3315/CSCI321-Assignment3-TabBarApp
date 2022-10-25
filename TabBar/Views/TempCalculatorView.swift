@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+//Creates an enum with the two choices for the first picker
 enum choice: String, CaseIterable, Identifiable {
     case ftoc = "°F → °C"
     case ctof = "°C → °F"
@@ -16,6 +17,7 @@ enum choice: String, CaseIterable, Identifiable {
 
 struct TempCalculatorView: View {
     
+    //Declares all needed variables
     @State private var tempSelection = choice.ftoc
     @State private var selected = 32
     @State private var option = 0
@@ -23,6 +25,7 @@ struct TempCalculatorView: View {
     @State private var optionChar = "C"
     let pickerData = [Array(-129...134), Array(-90...57)]
     
+    //This function changes certain variables depending on if the selection is c to f, or f to c
     func change() {
         
         if tempSelection == choice.ftoc {
@@ -39,6 +42,7 @@ struct TempCalculatorView: View {
         
     }
     
+    //This function calculates what the result should be when the second picker is modified
     func calculate() {
         
         if tempSelection == choice.ftoc {
@@ -54,11 +58,13 @@ struct TempCalculatorView: View {
     var body: some View {
         VStack (spacing: 10){
             
+            //Creates a text for the title
             Text("Temp Calculator")
                 .font(.title)
                 .bold()
                 .padding()
             
+            //Creates a picker to show the two options, f to c or c to f, and adds an onChange to check when modified
             Picker("Temperature Choice", selection: $tempSelection) {
                 ForEach(choice.allCases) { c in
                     Text(c.rawValue.capitalized).tag(c)
@@ -70,6 +76,7 @@ struct TempCalculatorView: View {
                 change()
             }
             
+            //Creates a picker that displays the entirety of the subarray of pickerData, dependign on which option is chosen, with an onChange to check when modified
             Picker("Temperature", selection: $selected) {
                 ForEach(pickerData[option], id: \.self) {
                     Text("\($0)")
@@ -80,6 +87,7 @@ struct TempCalculatorView: View {
                 calculate()
             }
             
+            //Creates a text that displays the calculated result
             Text("\(String(format:"%.2f", result)) °\(optionChar)")
                 .bold()
             

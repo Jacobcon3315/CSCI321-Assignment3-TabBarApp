@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+        //Creates a TabView and adds the two views to it
         TabView {
             TempCalculatorView()
                 .tabItem {
