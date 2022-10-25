@@ -50,11 +50,11 @@ struct TempCalculatorView: View {
     func calculate() {
         
         if tempSelection == choice.ftoc {
-            result = (Double(selected) - 32) / 0.5556
+            result = (Double(selected) - 32) * 0.5556
         }
         
         else {
-            result = Double(selected) * 0.5556 + 32
+            result = Double(selected) * 1.8 + 32
         }
         
     }
