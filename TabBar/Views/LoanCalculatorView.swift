@@ -17,8 +17,8 @@ struct LoanCalculatorView: View {
     func compute() {
         
         let principalD = Double(principal)
-        let pow1 = pow((1.0 + interest),(years * 12.0))
         let intDivide = (interest / 100.0) / 12.0
+        let pow1 = pow((1.0 + intDivide),(years * 12.0))
         
         payment = (principalD! * intDivide * pow1) / (pow1 - 1.0)
         
